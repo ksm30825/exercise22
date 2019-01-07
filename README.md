@@ -1,15 +1,10 @@
-# exercise22
 package com.kh.Study;
 import java.util.Scanner;
 import java.util.Random;
 public class Study_C_for {
 	Scanner sc=new Scanner(System.in);
 	public void KSMc1_ksm() {
-		//타이머 동작 시간 입력하기
-		//시간 변수를 정수로 입력받아서 1~60초 사이가 아니라면 "잘못 누르셨습니다"출력
-		//1~60초 사이를 입력하면 입력받은초만큼 줄어드는 시간을 표시
-		//모든 동작 후에 종료를 선언
-		//예:10 입력시 =10 9 8 7 6 5 4 3 2 1 종료 
+		
 		System.out.print("타이머입력 시간(1~60초) : ");
 		int timer = sc.nextInt();
 		if(timer>=1&&timer<=60) {
@@ -58,9 +53,7 @@ public class Study_C_for {
 		}
 	}
 	public void KSMc3_ksm() {
-		//비밀번호 맞추기
-		//1~10까지의 정수 중 하나 입력 해서 맞출때까지
-		//기회는 5번
+		
 		int random = new Random().nextInt(10)+1;
 		for(int chance=0;chance<5;chance++) {
 			System.out.print("정수 입력  : ");
@@ -102,11 +95,7 @@ public class Study_C_for {
 		}System.out.println("");
 	}
 	public void CBUc1_ksm() {
-		/*for 문제 1
-		정수 하나를 입력받아서 0부터 받은 값까지
-		짝수를 더한 값을 출력한다
-		단, if문을 사용하지 않는다
-		hint : 증감식에 해답이있다*/
+		
 		System.out.print("수 입력 : ");
 		int input=sc.nextInt();
 		int sum=0;
@@ -116,10 +105,7 @@ public class Study_C_for {
 		}System.out.println(sum);
 	}
 	public void CBUc2_ksm() {
-		/*for 문제 2
-		정수 하나를 입력받아서 0부터 받은 값까지
-		5의 배수를 더한 값을 출력한다.
-		if문 사용*/
+		
 		System.out.print("수 입력 : ");
 		int input=sc.nextInt();
 		int sum=0;
@@ -137,24 +123,14 @@ public class Study_C_for {
 		}
 		
 		if (sum == 0) {
-			//System.out.println(sum);	
-		//} else {
+			
 			System.out.println(change+"의 배수가 없습니다.");
 		}
-		//30을 입력했을 때 
-		//5+10+15+20+25+30=105 라고 출력하고 싶을땐??
+		
 		
 	}
 	public void CBUc3_ksm() {
-		/*for 문제 3
-		줄 수를 입력받아 역 삼각형이 출력되게한다
-		ex)
-		*****
-		****
-		***
-		**
-		*
-		**/
+		
 		System.out.print("줄 수 입력 : ");
 		int row=sc.nextInt();
 		int max=row;
@@ -193,16 +169,11 @@ public class Study_C_for {
 				interest=interest+0.02;
 			}
 		}
-		//6개월때 추가 4000원 어디서?
+		
 	}
-	public void IJYc3_ksm() {
-		//적금 문제 수정함
-	}
+	
 	public void NGUc1_ksm() {
-		/*약수값을 구할 정수를 입력하고 약수를 출력하시오 .
-		약수값의 갯수를 출력하시오
-		ex) { 1,2,4,8} = 8의 약수, 약수의 갯수는 : 4
-		hint : 약수는 나눴을 때 나머지가 0임 , 본인도 약수에 포함 */
+		
 		System.out.print("수  : ");
 		int input = sc.nextInt();
 		int count=0;
@@ -220,7 +191,7 @@ public class Study_C_for {
 			}
 		}System.out.println("}\n갯수 : "+count);
 	}
-	//약수값의 갯수???
+	
 	public void CYRc1_ksm() {
 		System.out.print("횟수 : ");
 		int cycle=sc.nextInt();
@@ -282,10 +253,7 @@ public class Study_C_for {
 		}
 	}
 	public void NJHc1_ksm() {
-		/*1.난이도(하) 총알 수에 맞게 총을 쏴주는 문제입니다.
-		총알의 개수를 입력 받습니다.
-		총알 개수에 맞게 탕 쏘면 됩니다.
-		쏠때마다 남은 탄의 개수를 나타내주세요.*/
+		
 		System.out.print("총알 갯수 : ");
 		int bullet = sc.nextInt();
 		for(int i=(bullet-1);i>0;i--) {
@@ -295,12 +263,7 @@ public class Study_C_for {
 		System.out.println("총알을 다쓰셨습니다.");
 	}
 	public void NJHc2_ksm() {
-		/*벽의 내구력은 300
-		데미지는 0~50까지의 난수
-		가장 처음에 벽을 부수겠냐는 메시지 출력 (y/n)
-		Y 일시 50까지의 랜덤의 데미지를 벽의 체력 300 에서 계속 차감합니다.
-		벽을 때릴 때마다 들어간 데미지와 남은 내구력을 출력합니다.
-		벽의 내구력이 0이하가 되면 벽이 부숴졌다는 메시지와 현재까지 때린 횟수를 출력합니다.*/
+		
 		int count=0;
 		int durability = 300;
 		System.out.print("벽을 부수겠습니까? (Y/N) : ");
@@ -314,14 +277,9 @@ public class Study_C_for {
 				count+=1;
 			}System.out.println(count+"회 쳐서 벽이 부숴졌습니다.");
 		}
-	}//내구도 -되었을땐 출력안하고 싶은데..
-	
+	}
 	public void NJHc3_ksm() {
-		/*개미무리를 생성합니다. 개미 무리는 개미(*)가 계속 생성되는데, 
-		개미는 6마리가 생길때마다 여왕개미(#)가 나오게 됩니다.
-		생성할 개미 무리 수와 
-		무리당 개미의 마리 수를 입력하면 그에 맞는 개미들이 나옵니다.
-		죄송해요.. 세번째 문제는 너무 허접하네요*/
+		
 		System.out.print("한 무리당 개미 마리수를 입력하세요 : ");
 		int per = sc.nextInt();
 		System.out.print("몇무리를 만드시겠습니까? : ");
